@@ -1,6 +1,6 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
-import { FaPen } from "react-icons/fa6";
+import { MdModeEdit } from "react-icons/md";
 
 
 export default function Header() {
@@ -16,11 +16,11 @@ export default function Header() {
         <link rel="import" href="component.html" />
         {/* onClick={handleClick} */}
         <div className="flex items-center text-xl font-bold bg-[#7EE46D] w-fit pl-2 p-1 pr-3 border-2 border-textBlue hover:shadow-xl rounded mr-6">
-          {/* <div><FaPen /></div> */}
+          <div><MdModeEdit /></div>
           <div className="pl-2"> Edit</div>
         </div>
         <div className="flex items-center text-xl font-bold bg-[#E04E4E] w-fit pl-2 p-1 pr-3 border-2 border-textBlue hover:shadow-xl rounded">
-          {/* <div><MdDelete /></div> */}
+          <div><MdDelete /></div>
           <div className="pl-1"> Delete</div>
         </div>
       </div>
@@ -171,7 +171,7 @@ export default function Header() {
             <div className="flex flex-col justify-between mt-12 ">
               <div className="">
                 <div className="font-bold ">Sample Input :</div>
-                <br />
+                {/* <br /> */}
                 <div className="h-20 pt-2 pl-5 text-lg rounded-md min-w-96 bg-inputBg">
                   <ul>
                     <li>1</li>
@@ -184,7 +184,7 @@ export default function Header() {
               <div className="flex flex-col justify-around">
                 <div className="">
                   <div className="text-xl font-bold"> Sample Output :</div>
-                  <br />
+                  {/* <br /> */}
                   <div className="h-20 pt-2 pl-5 text-lg rounded-md min-w-96 h-117 bg-inputBg">
                     <ul>
                       <li>1</li>
