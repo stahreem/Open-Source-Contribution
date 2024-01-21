@@ -180,10 +180,11 @@ export default function Header() {
               {dummyData.topics.map((topics, index) => (
                 <div
                   key={index}
-                  className="flex w-40 p-2 mb-4 mr-1 text-lg font-bold text-center rounded bg-bgBlue"
+                  className="flex flex-col py-5 mb-4 mr-1 text-lg font-bold text-center rounded w-72 px-38 bg-bgBlue"
                   onClick={() => handleTestCase(index)}
                 >
                   {topics.title}
+                  
                 </div>
               ))}
               </div>
