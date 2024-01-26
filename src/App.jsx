@@ -1,11 +1,19 @@
 import Header from "./components/Header";
+import Addproblem from "./components/Addproblem";
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route } from "react-router-dom";
 
-function App() {
+
+
+export default function App() {
   return (
-    <>
-    <Header/>
-    </>
+    <Routes>
+    <Route path="/view" element={<Header/>}/>
+    <Route path="/add" element={<Addproblem/>} />
+    </Routes>
   );
 }
 
-export default App;
+

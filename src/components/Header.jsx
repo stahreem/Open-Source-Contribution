@@ -60,7 +60,7 @@ export default function Header() {
   const [testcase, setTestcase] = useState(false);
   const [input, setInput] = useState(false);
   const [output, setOutput] = useState(false);
-  const [id, setId ] = useState(false)
+  const [id, setId] = useState(false);
   const handleTestCase = (index) => {
     setTestcase(index);
     setId(true);
@@ -177,23 +177,24 @@ export default function Header() {
             <div className="pl-6 pr-4 text-lg font-bold pt-7">
               Test Case{" "}
               <div className="flex flex-wrap justify-between">
-              {dummyData.topics.map((topics, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col py-5 mb-4 mr-1 text-lg font-bold text-center rounded w-72 px-38 bg-bgBlue"
-                  onClick={() => handleTestCase(index)}
-                >
-                  {topics.title}
-                  
-                </div>
-              ))}
+                {dummyData.topics.map((topics, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col py-5 mb-4 mr-1 text-lg font-bold text-center rounded w-72 px-38 bg-bgBlue"
+                    onClick={() => handleTestCase(index)}
+                  >
+                    {topics.title}
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="flex items-center pl-6 pt-7">
               <div className="pr-4 text-lg font-bold">Test Case Id :</div>
-              <div className="pt-2 pl-5 text-xl rounded-md w-80 h-11 bg-bgBlue"
-              onClick={() => setId(true)}>
+              <div
+                className="pt-2 pl-5 text-xl rounded-md w-80 h-11 bg-bgBlue"
+                onClick={() => setId(true)}
+              >
                 {dummyData.topics[testcase]?.id}
               </div>
             </div>
