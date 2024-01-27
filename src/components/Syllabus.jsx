@@ -3,32 +3,49 @@ import { FaPlus } from 'react-icons/fa';
 
 const Syllabus = () => {
   const [topics, setTopics] = useState([]);
+  const [newTopic, setNewTopic] = useState({
+    topicName: '',
+    description: '',
+    exampleCode: '',
+  });
 
-  const syllabus = () => {
-    const handleAddSyllabus = () => {
-      const newTopic = {
-        id: Date.now(),
-        name: document.getElementById('TopicName').value || `Topic ${topics.length + 1}`,
-        description: document.getElementById('desc').value || "",
-        sampleCode: document.getElementById('samplecode').value || "",
-      };
-  
-      setTopics([...topics, newTopic]);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewTopic((prevTopic) => ({ ...prevTopic, [name]: value }));
+  };
+
+  const handleAddSyllabus = () => {
+    const topicToAdd = {
+      topicName: newTopic.topicName || `Topic ${topics.length + 1}`,
+      description: newTopic.description || '',
+      exampleCode: newTopic.exampleCode || '',
     };
 
+    // syllabusData([...topics, topicToAdd]);
+    setTopics((prevTopics) => [...prevTopics, topicToAdd]);
+    setNewTopic({
+      topicName: '',
+      description: '',
+      exampleCode: '',
+    });
+  };
+
+
     return (
-      <div className='rounded bg-inputBg'>
-        <div className="w-full h-full pt-5 pl-5 text-sm rounded-md mt-14 bg-inputBg">
+      <div>
+       <div className="mt-6 text-2xl font-semibold ">Add Test Case </div>
+      <div className='w-full px-16 py-5 text-lg rounded-md min-w-96 h-117 bg-inputBg'>
+       
           {/* Topic input section */}
-          <div className="pl-6 pt-7">
+          <div className="mt-10">
             <label className="pr-4 text-lg font-bold" htmlFor="TopicName">
-              Topic name:
+              Test Case ID:
             </label>
             <input
               type="text"
               id="TopicName"
-              placeholder="Enter Topic name..."
-              className="pl-5 text-sm rounded-md w-80 h-11 bg-bgBlue hover:border-2 border-textBlue focus:placeholder:text-textBlue placeholder-opacity-80"
+              placeholder="Enter Test Case ID here"
+              className="h-16 px-3 ml-4 font-medium border-2 outline-none resize-none w-96 rounded-xl"
             />
           </div>
           {/* Description input section */}
@@ -71,7 +88,7 @@ const Syllabus = () => {
               <div className="pl-1"> Add Syllabus</div>
             </div>
           </div>
-        </div>
+      
 
         {/* Separator */}
         <div className="w-5/6 m-auto mt-3 border border-slate-400"></div>
@@ -89,10 +106,11 @@ const Syllabus = () => {
           ))}
         </div>
       </div>
+      </div>
     );
   };
 
-  return syllabus();
-};
+  // return syllabus();
+
 
 export default Syllabus;
