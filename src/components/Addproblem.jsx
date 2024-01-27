@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
-
+import Syllabus from "./Syllabus";
 
 export default function Addproblem() {
  
@@ -294,38 +294,11 @@ const handleSubmit = (e) => {
         </div>
       </div>
 
-    <div>
-            <div className="mt-6 text-2xl font-semibold ">Add Test Case </div>
-        <div className="w-full px-16 py-5 text-lg rounded-md min-w-96 h-117 bg-inputBg">
-            <div className="mt-10">
-            <label className="mt-10 font-bold">Test Case ID:</label>
-            <input className="h-16 px-3 ml-4 font-medium border-2 outline-none resize-none w-96 rounded-xl" placeholder="Enter Test Case ID here "></input>
-            </div>
-            <div className="mt-5 ">
-                <label className="font-bold ">Input:</label>
-                <div><textarea 
-                 className="w-full border-2 outline-none resize-none h-28 rounded-xl" placeholder="Enter output here "></textarea></div> 
-                <div className="mt-5 ">
-                <label  className="font-bold">Output:</label>
-                <div><textarea 
-                className="w-full border-2 outline-none resize-none h-28 rounded-xl"
-                 placeholder="Enter output here "></textarea></div> 
-                 <div className="flex justify-end p-5 ">
-        <div className="flex items-center text-xl font-bold bg-[#7EE46D] w-fit pl-2 p-1 pr-3 border-2 border-textBlue hover:shadow-xl rounded mr-6">
-          <div>
-          <FaPlus />
-          </div>
-          <div className="pl-2">Add Test Cases </div>
-        </div> </div>
-                </div>
-                <div className="w-5/6 m-auto mt-6 border border-slate-400 "></div>
-                <div>
-                    <div className="mt-4 ">
-                    <div className="font-bold ">Test Case </div>
-                </div>
-            </div>
+           
+        <div>
+            <Syllabus/>
         </div>
-</div>
+    <div>
 <div className="mt-10 ">
           <div className="text-2xl font-bold">Constrain :</div>
 
