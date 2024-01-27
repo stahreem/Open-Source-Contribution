@@ -63,17 +63,17 @@ const Syllabus = () => {
             ></textarea>
           </div>
           {/* Sample Code input section */}
-          <div className="pl-6 pt-7">
-            <label className="pr-4 text-lg font-bold" htmlFor="samplecode">
-              Sample Code:
+          <div className="mt-5">
+            <label className="font-bold" htmlFor="samplecode">
+              Output :
             </label>
             <br />
             <textarea
               cols="173"
               rows="7"
               id="samplecode"
-              placeholder="Enter Sample Code..."
-              className="pt-5 pl-5 text-sm rounded-md bg-bgBlue hover:border-2 border-textBlue focus:placeholder:text-textBlue placeholder-opacity-80"
+              placeholder="Enter output here ..."
+              className="w-full border-2 outline-none resize-none h-28 rounded-xl"
             ></textarea>
           </div>
           {/* Add Syllabus button */}
@@ -85,7 +85,7 @@ const Syllabus = () => {
               <div>
                 <FaPlus />
               </div>
-              <div className="pl-1"> Add Syllabus</div>
+              <div className="pl-1"> Add Test Cases </div>
             </div>
           </div>
       
@@ -94,7 +94,7 @@ const Syllabus = () => {
         <div className="w-5/6 m-auto mt-3 border border-slate-400"></div>
 
         {/* Syllabus display section */}
-        <div className="pl-6 pr-4 text-lg font-bold bg-inputBg pt-7">Syllabus:</div>
+        <div className="pl-6 pr-4 text-lg font-bold bg-inputBg pt-7">Test Cases :</div>
         <div className="flex flex-wrap justify-between pl-6 pr-6 mt-6">
           {topics.map((topic) => (
             <div
