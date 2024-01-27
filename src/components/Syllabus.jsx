@@ -49,17 +49,17 @@ const Syllabus = () => {
             />
           </div>
           {/* Description input section */}
-          <div className="pl-6 pt-7">
-            <label className="pr-4 text-lg font-bold" htmlFor="desc">
-              Description:
+          <div className="mt-5">
+            <label className="font-bold">
+              Input :
             </label>
             <br />
             <textarea
               cols="173"
               rows="7"
               id="desc"
-              placeholder="Enter Description..."
-              className="pt-5 pl-5 text-sm rounded-md bg-bgBlue hover:border-2 border-textBlue focus:placeholder:text-textBlue placeholder-opacity-80"
+              placeholder="Enter input here..."
+              className="w-full border-2 outline-none resize-none h-28 rounded-xl"
             ></textarea>
           </div>
           {/* Sample Code input section */}
