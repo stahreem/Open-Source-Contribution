@@ -59,9 +59,6 @@ const handleSubmit = (e) => {
       <div className="flex justify-between m-7">
         <div>
           <div className="mt-10">
-            <label htmlFor="" className="">
-              Domain{" "}
-            </label>
             <div className="">
               <select
                 name="dropdown1"
@@ -70,7 +67,7 @@ const handleSubmit = (e) => {
                 
                 className="py-3 bg-blue-200 rounded h-11 w-80"
                 >
-                  <option value="">Domain</option>
+                   <option className="py-2 bg-blue-100"   value="">Domain </option>
                 <option className="py-2 bg-blue-100"     value="javaScript ">
                  <div className="flex justify-center ">
                   <div >Java Script</div>
@@ -87,10 +84,7 @@ const handleSubmit = (e) => {
             </div>
           </div>
 
-          <div className="mt-10">
-            <label htmlFor="" className="">
-              Topic{" "}
-            </label>
+          <div className="mt-16 ">
             <div className="">
               <select
                 name="dropdown2"
@@ -114,7 +108,6 @@ const handleSubmit = (e) => {
         </div>
         <div>
           <div className="m-10">
-            <label htmlFor="dropdown3"> Problem ID </label>
             <div>
               <select
                 name="dropdown3"
@@ -123,14 +116,15 @@ const handleSubmit = (e) => {
                 className="py-3 bg-blue-200 rounded h-11 w-80"
                 
               >
-                <option className="py-2 bg-blue-100"  >ID = 101</option>
-                <option className="py-2 bg-blue-100"  >ID = 102</option>
-                <option className="py-2 bg-blue-100"  >ID = 103</option>
-                <option className="py-2 bg-blue-100"  >ID = 104</option>
-                <option className="py-2 bg-blue-100"  >ID = 105</option>
-                <option className="py-2 bg-blue-100"  >ID = 106</option>
-                <option className="py-2 bg-blue-100"  >ID = 107</option>
-                <option className="py-2 bg-blue-100"  >ID = 108</option>
+                <option className="py-2 bg-blue-100"  >Problem ID </option>
+                <option className="py-2 bg-blue-100"  value="ID=101">ID = 101</option>
+                <option className="py-2 bg-blue-100"  value="ID=102">ID = 102</option>
+                <option className="py-2 bg-blue-100"  value="ID=103">ID = 103</option>
+                <option className="py-2 bg-blue-100"  value="ID=104">ID = 104</option>
+                <option className="py-2 bg-blue-100"  value="ID=105">ID = 105</option>
+                <option className="py-2 bg-blue-100"  value="ID=106">ID = 106</option>
+                <option className="py-2 bg-blue-100"  value="ID=107">ID = 107</option>
+                <option className="py-2 bg-blue-100"  value="ID=108">ID = 108</option>
               </select>
             </div>
           </div>
