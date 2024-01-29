@@ -7,7 +7,7 @@ export default function Editproblem() {
   const [formData, setFormData] = useState({
     dropdown1: "html",
     dropdown2: "topic3",
-    dropdown3: "ID=103",
+    problemID: "ID=103",
     problemName: "Prime Number",
     heading:
       "Designer at work who dont have any content for their product yet have the possibility to insert a dummy text into their design to judge on the arrangement of text on their site, on readability or on fonts and sizes.",
@@ -58,12 +58,12 @@ export default function Editproblem() {
         <div className="flex justify-between m-7">
           <div>
             <div className="mt-10">
-              <div className="">
+              <div>
                 <select
                   name="dropdown1"
                   value={formData.dropdown1}
                   onChange={handleDropdown}
-                  className="py-3 bg-blue-200 rounded h-11 w-80"
+                  className="py-3 bg-blue-200 rounded h-11 w-80 m-7"
                 >
                   <option className="py-2 bg-blue-100" value="">
                     Domain{" "}
@@ -100,8 +100,8 @@ export default function Editproblem() {
               </div>
             </div>
 
-            <div className="mt-16 ">
-              <div className="">
+            <div className="mt-16 m-7 ">
+              <div>
                 <select
                   name="dropdown2"
                   value={formData.dropdown2}
@@ -147,46 +147,25 @@ export default function Editproblem() {
           </div>
           <div>
             <div className="m-10">
-              <div>
-                <select
-                  name="dropdown3"
-                  value={formData.dropdown3}
-                  onChange={handleDropdown}
-                  className="py-3 bg-blue-200 rounded h-11 w-80"
-                >
-                  <option className="py-2 bg-blue-100">Problem ID </option>
-                  <option className="py-2 bg-blue-100" value="ID=101">
-                    ID = 101
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=102">
-                    ID = 102
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=103">
-                    ID = 103
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=104">
-                    ID = 104
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=105">
-                    ID = 105
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=106">
-                    ID = 106
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=107">
-                    ID = 107
-                  </option>
-                  <option className="py-2 bg-blue-100" value="ID=108">
-                    ID = 108
-                  </option>
-                </select>
+            <div>
+              <div className="m-10 ">
+                <div> Problem ID</div>
+                <div className="">
+                  <input
+                    name="problemID"
+                    value={formData.problemID}
+                    onChange={handleTextarea}
+                    className="py-3 bg-blue-200 rounded h-11 w-80"
+                    placeholder="Enter Problem ID..."
+                  ></input>
+                </div>
               </div>
             </div>
 
             <div>
-              <div className="m-10 ">
-                <div> Problem Name </div>
-                <div className="">
+              <div className="m-10">
+                <div className="mt-16 "> Problem Name </div>
+                <div>
                   <input
                     name="problemName"
                     value={formData.problemName}
@@ -199,7 +178,7 @@ export default function Editproblem() {
             </div>
           </div>
         </div>
-
+      </div>
         <div>
           <div className="">
             <div className="text-2xl font-bold">Heading:</div>
@@ -429,11 +408,12 @@ export default function Editproblem() {
             </div>{" "}
           </div>
         </div>
-        <div className="w-5/6 m-auto mt-6 border border-slate-400 "></div>
+<div className="w-5/6 m-auto mt-6 border border-slate-400 "></div>
         <div className="pb-16 mt-8 text-xl font-bold text-center">
           Created on: 12:05 AM | 11-25-2023
         </div>
       </form>
+    {/* </div> */}
     </div>
   );
 }
