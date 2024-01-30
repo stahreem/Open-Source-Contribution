@@ -19,7 +19,7 @@ export default function Editproblem() {
   });
 
   const [points, setPoints] = useState("8");
-  const [difficulty, setDifficulty] = useState("advance");
+  const [difficulty, setDifficulty] = useState("advanced");
 
   const handleTextarea = (e) => {
     const { name, value } = e.target;
@@ -53,7 +53,7 @@ export default function Editproblem() {
 
   return (
     <div className="h-full pl-16 pr-16 text-lg bg-bgBlue w text-textBlue font-raleway">
-      <div className="pt-8 text-3xl font-bold text-center">Add Problem</div>
+      <div className="pt-8 text-3xl font-bold text-center">Edit Problem</div>
       <form onSubmit={handleSubmit}>
         <div className="flex justify-between m-7">
           <div>
@@ -194,7 +194,7 @@ export default function Editproblem() {
             </div>
           </div>
           <div className="mt-14 ">
-            <div className="text-2xl font-bold">Discription :</div>
+            <div className="text-2xl font-bold">Description :</div>
             <div>
               <textarea
                 name="discription"
@@ -342,7 +342,7 @@ export default function Editproblem() {
         </div>
 
         <div>
-          {/* <Syllabus/> */}
+          
           <div>
             <div className="mt-10 text-2xl font-bold ">Test Cases </div>
           
@@ -356,7 +356,7 @@ export default function Editproblem() {
       
         <div>
           <div className="mt-10 ">
-            <div className="text-2xl font-bold">Constrain :</div>
+            <div className="text-2xl font-bold">Constraint :</div>
 
             <div>
               <textarea
@@ -403,7 +403,7 @@ export default function Editproblem() {
                 <FaPlus />
               </div>
               <button type="submit" className="pl-2">
-                Add Problem{" "}
+                Edit Problem{" "}
               </button>
             </div>{" "}
           </div>
