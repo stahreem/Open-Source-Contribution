@@ -1,0 +1,11 @@
+{
+  "name": "open-source-contribution",
+  "version": "2.0.0",
+  "description": "version 2 backend ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shifa and juviria",
+  "license": "ISC"
+}
